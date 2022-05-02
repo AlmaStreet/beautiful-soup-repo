@@ -4,24 +4,26 @@ By Jason Chen
 
 inspired by:
 https://data36.com/scrape-multiple-web-pages-beautiful-soup-tutorial/
+https://www.skillshare.com/classes/Web-Scraping-Essentials-with-Python-Requests-and-BeautifulSoup/1120631453/
+
 webpage scraped:
 https://www.bookdepository.com/bestsellers
 '''
+import sys
+import logging
+import openpyxl
 import requests
 from bs4 import BeautifulSoup
-import openpyxl
-import logging
-import sys
 
 logger = logging.getLogger()
 stream_handler = logging.StreamHandler(sys.stdout)
 
-max_pages = 20
-page = 1
+max_pages = 300
+page = 0
 soups = []
 logging.info("1. Start Page Download")
 # Gets and stores all pages into a soup list.
-while True:
+while page < max_pages:
     response = requests.get(
         url=f"https://www.bookdepository.com/bestsellers?page={page}"
     )
@@ -72,4 +74,4 @@ for book_list_index in book_lists:
     for book_value in book_lists[book_list_index]:
         sheet.append(book_value)
 
-wb.save("book-depo.xlsx")
+wb.save("book-depo-1.xlsx")
