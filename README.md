@@ -8,7 +8,7 @@ The project consists of 3 steps:
 2. Parse and extract data values from the response webpage using BeautifulSoup.
 3. Save the data values into an excel sheet.
 
-To get started, download book_scraper_improved.py and the libraries below:
+To get started, download `book_scraper_improved.py` and the libraries below:
 
 ```
 >>> pip install openpyxl
