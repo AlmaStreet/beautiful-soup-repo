@@ -58,7 +58,7 @@ while True:
                 "div", class_="price-wrap omnibus-experiment-control"
             ).p.span.text.strip()
         except Exception:
-            pass
+            continue
         sheet.append([title, author, publish, price, page, book_number])
         book_number += 1
     page += 1
@@ -66,7 +66,7 @@ while True:
     print(f"\tStep 4. Saving book data")
     # Data is saved every page to ensure data can persist in case of
     # a crash and data can be used while newer data is being saved.
-    wb.save("book-depo-1.xlsx")
+    wb.save("book-depo.xlsx")
 
 print(f"Book scraping complete!")
 
