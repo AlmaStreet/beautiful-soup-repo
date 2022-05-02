@@ -23,7 +23,7 @@ If you are still experiencing import issues:
 5. Click Install Package.
 
 Once imports are resolved, go ahead and run the Python script.
-The script will go to the website: https://www.bookdepository.com/bestsellers?page=333
+The script will go to the website: https://www.bookdepository.com/bestsellers
 and extract every available book's Title, Author, Publish date, Price and
 save the data in an excel sheet labeled book-depo.xlsx.
 
