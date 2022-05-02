@@ -9,10 +9,12 @@ The project consists of 3 steps:
 3. Save the data values into an excel sheet.
 
 To get started, download book_scraper_improved.py and the libraries below:
+
+```
 >>> pip install openpyxl
 >>> pip install requests
 >>> pip install bs4
-
+```
 If you are still experiencing import issues:
 1. Nagivate to your Python interpreter settings.
 2. Under Project, select your Python project.
